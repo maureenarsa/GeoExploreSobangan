@@ -231,9 +231,8 @@
             letter-spacing: 0.3px;
         }
 
-        /* --- BARU: Style untuk Credit --- */
         .credits {
-            margin-top: auto; /* Mendorong ke bawah */
+            margin-top: auto;
             padding-top: 15px;
             border-top: 1px solid var(--light-gray);
             text-align: center;
@@ -279,10 +278,9 @@
             padding-top: 20px; 
         }
 
-        /* --- Style untuk modal disclaimer --- */
         #disclaimerModal {
-            z-index: 1005; /* Paling atas */
-            display: none; /* Diatur oleh JS */
+            z-index: 1005; 
+            display: none; 
             align-items: center;
             justify-content: center;
             padding: 15px;
@@ -442,7 +440,6 @@
             margin-right: 8px;
         }
 
-        /* Style untuk Panel Rute Mirip Google Maps */
         .leaflet-routing-container {
             background-color: white;
             border-radius: 6px;
@@ -450,216 +447,15 @@
             font-family: var(--font-main);
         }
 
-        .leaflet-routing-remove-waypoint {
-            display: none !important;
-        }
-
-        .leaflet-routing-geocoders {
-            position: relative;
-            padding: 10px 15px 10px 45px; 
-        }
-
-        .leaflet-routing-geocoders::before {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            content: "\f142"; /* fa-ellipsis-v */
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%) scaleY(1.5);
-            color: #ccc;
-            font-size: 8px;
-            letter-spacing: 2px;
-        }
-
-        .leaflet-routing-waypoint {
-            position: relative;
-            padding: 5px 0;
-            margin: 0 !important;
-        }
-
-        .leaflet-routing-waypoint:first-child::before {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 400; 
-            content: "\f111"; /* fa-circle */
-            position: absolute;
-            left: -28px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #666;
-            font-size: 12px;
-            border: 2px solid white;
-            box-sizing: content-box;
-        }
-
-        .leaflet-routing-waypoint:last-child::before {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900; 
-            content: "\f3c5"; /* fa-map-marker-alt */
-            position: absolute;
-            left: -28px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #d33;
-            font-size: 16px;
-        }
-
-        .leaflet-routing-geocoder {
-            position: relative;
-        }
-
         .leaflet-routing-geocoder input {
             border: 1px solid var(--medium-gray) !important;
-            padding: 10px 40px 10px 12px !important; 
+            padding: 10px 12px !important; 
             width: 100% !important;
             box-sizing: border-box;
             transition: border-color 0.2s;
             border-radius: 6px !important;
             font-family: var(--font-main);
             font-size: 14px;
-        }
-        .leaflet-routing-geocoder input:focus {
-            border-color: var(--primary-color) !important;
-            box-shadow: 0 0 0 3px rgba(8, 108, 252, 0.15);
-        }
-
-        .leaflet-routing-geocoder-icon {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            background-image: none !important;
-            top: 0 !important;
-            right: 0 !important;
-            bottom: 0;
-            margin: auto 0;
-            width: 40px !important;
-            height: 100% !important;
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-        }
-        .leaflet-routing-geocoder-icon::before {
-             content: "\f002"; /* fa-search */
-        }
-        
-        .leaflet-routing-geocoders .leaflet-routing-add-waypoint {
-            position: absolute;
-            right: -25px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .leaflet-routing-add-waypoint::before {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            content: "\f362"; /* fa-exchange-alt */
-            transform: rotate(90deg);
-            color: #555;
-            font-size: 14px;
-        }
-
-        .routing-suggestions-container {
-            padding: 0 15px 10px 15px;
-            border-top: 1px solid var(--light-gray);
-            margin-top: 10px;
-        }
-        .routing-suggestion-item {
-            display: flex;
-            align-items: center;
-            padding: 10px 0;
-            cursor: pointer;
-        }
-        .routing-suggestion-item:hover .suggestion-text {
-            color: var(--primary-color);
-        }
-        .routing-suggestion-item .suggestion-icon {
-            font-size: 18px;
-            color: var(--primary-color);
-            background-color: #e7f1ff;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
-        .routing-suggestion-item .suggestion-text {
-            font-weight: 500;
-            font-size: 14px;
-            color: var(--dark-gray);
-            transition: color 0.2s;
-        }
-        
-        .leaflet-control-geocoder-alternatives {
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            border: 1px solid var(--medium-gray);
-        }
-        .leaflet-control-geocoder-alternatives a {
-            font-size: 14px;
-            padding: 10px 40px;
-            position: relative;
-        }
-        .leaflet-control-geocoder-alternatives a::before {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 400; 
-            content: "\f017"; /* fa-clock */
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #777;
-        }
-        
-        .leaflet-routing-container:not(.leaflet-routing-container-summary) .leaflet-routing-itinerary-container {
-            display: none;
-        }
-        .leaflet-routing-itinerary-container {
-            padding: 10px 15px;
-            font-size: 14px;
-        }
-        
-        .leaflet-bar a, .leaflet-bar a:hover {
-            width: 30px !important;
-            height: 30px !important;
-            line-height: 30px !important;
-        }
-        .leaflet-bar a i { 
-             color: var(--primary-color);
-        }
-        .leaflet-bar a:hover i {
-            color: var(--primary-color-darker);
-        }
-        
-        .leaflet-control-geocoder {
-            border-radius: 4px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-        }
-        .leaflet-control-geocoder-form input {
-            height: 30px !important; 
-            border-radius: 4px 0 0 4px;
-            border: none; 
-            padding-left: 8px;
-            font-size: 13px;
-        }
-         .leaflet-control-geocoder-icon {
-            width: 30px !important; 
-            height: 30px !important; 
-            border-radius: 0 4px 4px 0;
-            background-position: center !important;
-        }
-        .leaflet-touch .leaflet-control-geocoder-icon {
-            width: 30px !important;
-            height: 30px !important;
         }
 
         #toggle-sidebar-btn {
@@ -688,64 +484,104 @@
             border-right: none;
         }
 
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--dark-gray);
+            font-size: 0.9em;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            font-family: var(--font-main);
+            font-size: 0.9em;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(8, 108, 252, 0.15);
+        }
+        .form-group small {
+            font-size: 0.8em;
+            color: var(--dark-gray);
+        }
+        .form-actions {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .specific-fields {
+            display: none;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        
+        .leaflet-bar a, .leaflet-bar a:hover {
+            width: 30px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+        }
+        .leaflet-bar a i { 
+             color: var(--primary-color);
+        }
+        .leaflet-bar a:hover i {
+            color: var(--primary-color-darker);
+        }
+
         @media (max-width: 768px) {
-    /* Membuat body bisa di-scroll normal di HP */
-    body {
-        height: auto;
-        display: block;
-    }
-
-    /* Mengecilkan judul header di HP */
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    /* Menyusun sidebar dan peta ke bawah, bukan ke samping */
-    .container {
-        flex-direction: column;
-        height: auto;
-        overflow: visible;
-    }
-
-    /* Mengatur sidebar agar full-width di HP */
-    #sidebar {
-        width: 100%;
-        max-height: 50vh; 
-        box-sizing: border-box; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        border-right: none;
-        border-bottom: 1px solid var(--medium-gray);
-        padding: 15px;
-    }
-
-    /* Menyembunyikan tombol buka-tutup di HP (karena tidak diperlukan) */
-    #toggle-sidebar-btn {
-        display: none;
-    }
-
-    /* Memberi tinggi yang pasti untuk peta di HP */
-    #map {
-        height: 60vh; 
-        flex-grow: 0;
-    }
-
-    /* Menyesuaikan ukuran modal (pop-up) di HP */
-    .modal-content {
-        width: 95%; 
-        margin: 5% auto; 
-        padding: 15px 20px;
-    }
-    .modal-header h2 {
-        font-size: 1.4em;
-    }
-    .modal-body {
-        max-height: 70vh;
-    }
-    #disclaimerModal .modal-content {
-        width: 95%;
-        margin: auto;
-    }
-}
+            body {
+                height: auto;
+                display: block;
+            }
+            .container {
+                flex-direction: column;
+                height: auto;
+                overflow: visible;
+            }
+            #sidebar {
+                width: 100%;
+                max-height: 50vh; 
+                box-sizing: border-box; 
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                border-right: none;
+                border-bottom: 1px solid var(--medium-gray);
+                padding: 15px;
+            }
+            #toggle-sidebar-btn {
+                display: none;
+            }
+            #map {
+                height: 60vh; 
+                flex-grow: 0;
+            }
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+                padding: 15px 20px;
+            }
+            .modal-header h2 {
+                font-size: 1.4em;
+            }
+            .modal-body {
+                max-height: 70vh;
+            }
+             #disclaimerModal .modal-content {
+                width: 95%;
+                margin: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -759,7 +595,7 @@
 
     <div class="container">
         <div id="sidebar">
-            <div> <!-- Wrapper for scrollable content -->
+            <div>
                 <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
                 <div class="dashboard-stats">
                     <h3><i class="fas fa-chart-pie"></i> Statistik</h3>
@@ -778,12 +614,13 @@
                 </div>
 
                 <h2 class="section-title-lokasi"><i class="fas fa-list-ul"></i> Daftar Lokasi</h2>
+                <button id="addDataBtn" class="route-button" style="width:100%; margin-bottom:10px;"><i class="fas fa-plus-circle"></i> Tambah Data Baru</button>
+
                 <div id="feature-list">
-                    <!-- Items will be populated by JavaScript -->
+                    <!-- Items populated by JavaScript -->
                 </div>
             </div>
 
-            <!-- --- BARU: Bagian Credit --- -->
             <div class="credits">
                 <p>Dibuat oleh: <br>
                 <strong>Maureen Arsa Sanda Cantika</strong><br>
@@ -801,6 +638,7 @@
                 <h2 id="modalTitle"><i class="fas fa-info-circle"></i> Detail Informasi</h2>
             </div>
             <div class="modal-body" id="modalBodyContent">
+                <!-- Content populated by JavaScript -->
             </div>
         </div>
     </div>
@@ -812,12 +650,76 @@
             </div>
             <div class="modal-body">
                 <p>Selamat datang di WebGIS Desa Sobangan.</p>
-                <p>Data dan informasi yang tersedia dalam halaman ini, termasuk lokasi titik, deskripsi, dan foto, disusun sebagai layanan informasi publik. Informasi ini bertujuan untuk mempromosikan potensi wisata dan UMKM di wilayah Desa Sobangan.</p>
-                <p>Meskipun kami berusaha menyajikan data seakurat mungkin, tidak ada jaminan bahwa semua informasi 100% akurat, lengkap, atau terkini. Pengguna disarankan untuk melakukan verifikasi mandiri sebelum mengunjungi lokasi.</p>
+                <p>Data dan informasi yang tersedia dalam halaman ini, termasuk lokasi, deskripsi, dan foto, disusun sebagai layanan informasi publik untuk mempromosikan potensi wisata dan UMKM di Desa Sobangan.</p>
+                <p>Meskipun kami berusaha menyajikan data seakurat mungkin, tidak ada jaminan semua informasi 100% akurat atau terkini. Pengguna disarankan melakukan verifikasi mandiri.</p>
                 <p><b>Dengan menekan tombol di bawah, Anda dianggap memahami dan menerima ketentuan ini.</b></p>
                 <div class="disclaimer-footer">
                      <button id="disclaimerCloseBtn" class="route-button" style="width: auto; padding: 10px 25px;">Saya Mengerti & Lanjutkan</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="crudModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button crud-close-button">×</span>
+            <div class="modal-header">
+                <h2 id="crudModalTitle"><i class="fas fa-edit"></i> Kelola Data Lokasi</h2>
+            </div>
+            <div class="modal-body" id="crudModalBody">
+                <form id="crudForm">
+                    <input type="hidden" id="crudItemId">
+                    <div class="form-group">
+                        <label for="crudItemType">Tipe Data:</label>
+                        <select id="crudItemType" required>
+                            <option value="wisata">Destinasi Wisata</option>
+                            <option value="umkm">UMKM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudNama">Nama Lokasi:</label>
+                        <input type="text" id="crudNama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudLat">Latitude:</label>
+                        <input type="number" step="any" id="crudLat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudLng">Longitude:</label>
+                        <input type="number" step="any" id="crudLng" required>
+                         <small><i>Klik lokasi pada peta untuk mengisi Latitude & Longitude secara otomatis.</i></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudDeskripsi">Deskripsi Detail:</label>
+                        <textarea id="crudDeskripsi" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudKategori">Kategori:</label>
+                        <input type="text" id="crudKategori" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudFasilitas">Fasilitas:</label>
+                        <textarea id="crudFasilitas" rows="2"></textarea>
+                        <small><i>Pisahkan setiap fasilitas dengan koma (contoh: Toilet, Parkir, WiFi).</i></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="crudJamOperasional">Jam Operasional:</label>
+                        <input type="text" id="crudJamOperasional" placeholder="Contoh: 08:00 - 17:00 WITA">
+                    </div>
+                    <div id="umkmFields" class="specific-fields">
+                         <div class="form-group">
+                            <label for="crudAlamat">Alamat Lengkap:</label>
+                            <input type="text" id="crudAlamat">
+                        </div>
+                         <div class="form-group">
+                            <label for="crudKontak">Kontak Person:</label>
+                            <input type="text" id="crudKontak">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                         <button type="submit" class="route-button">Simpan Data</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -831,550 +733,431 @@
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
     
     <script>
-        // --- PENDEFINISIAN VARIABEL DAN KONSTANTA DATA ---
-        const initialCoords = [-8.502, 115.192]; 
-        const dataWisata = [
-            { id: "wisata3", nama: "Tugu Pahlawan Kapten Tjok. Agung Tresna", lat: -8.497394, lng: 115.195481, deskripsi_singkat: "Monumen untuk mengenang jasa pahlawan.", deskripsi_detail: "Tugu Pahlawan Kapten Tjok. Agung Tresna merupakan sebuah monumen bersejarah yang berdiri kokoh di Desa Sobangan sebagai wujud penghormatan abadi atas jasa dan pengorbanan heroik Kapten Anumerta Tjokorda Agung Tresna. Lokasi ini memiliki makna yang mendalam, karena Desa Sobangan pernah menjadi Markas Besar Pandawa, pusat komando perjuangan gerilya yang dipimpin oleh Kapten Tjok. Agung Tresna melawan tentara NICA. Dibangun atas inisiatif dan swadaya masyarakat setempat sekitar tahun 1953, pendirian tugu ini juga dilandasi oleh sebuah keyakinan spiritual setelah munculnya pertanda gaib yang diyakini sebagai keinginan arwah sang pahlawan untuk diabadikan di tanah tempat ia berjuang bersama rakyat yang setia. Lebih dari sekadar penanda fisik, monumen ini adalah simbol ikatan batin yang kuat antara seorang pahlawan dengan masyarakatnya, serta menjadi pengingat sejarah perjuangan kemerdekaan bagi seluruh generasi di Desa Sobangan.", gambar: ["./tugu_pahlawan.jpeg"], kategori: "Monumen & Sejarah", fasilitas: ["Area Terbuka", "Akses Umum"], jam_operasional: "Terbuka 24 Jam", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" },
-            { id: "wisata4", nama: "Lapangan Umum Kapten Tjok. Agung Tresna", lat: -8.497291, lng: 115.195171, deskripsi_singkat: "Fasilitas olahraga dan ruang terbuka hijau.", deskripsi_detail: "Mengabadikan nama dan semangat sang pahlawan, Lapangan Umum Kapten Tjok. Agung Tresna merupakan jantung dari kehidupan sosial dan olahraga bagi masyarakat Desa Sobangan. Hamparan rumput hijau yang terawat ini tidak pernah sepi dari aktivitas, mulai dari riuh oleh sorak-sorai anak-anak dan pemuda yang berlatih sepak bola setiap sore, hingga menjadi lokasi utama untuk berbagai perayaan desa, upacara, dan kegiatan rekreasi bersama. Lebih dari sekadar fasilitas olahraga, lapangan ini adalah ruang terbuka tempat terjalinnya kebersamaan, tumbuhnya bibit-bibit atlet lokal, dan dilestarikannya semangat komunal yang menjadi ciri khas warga Desa Sobangan.", gambar: ["./lapangan_bolaumum.jpeg"], kategori: "Olahraga & Rekreasi", fasilitas: ["Lapangan Bola", "Area Terbuka"], jam_operasional: "Terbuka untuk umum", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" },
-            { id: "wisata5", nama: "Uma Pacung Jogging Track", lat: -8.484339, lng: 115.187119, deskripsi_singkat: "Jalur lari di sekitar area persawahan.", deskripsi_detail: "Uma Pacung Jogging Track adalah sebuah oase hijau yang menawarkan pengalaman rekreasi unik di tengah lanskap agraris Desa Sobangan. Jalur aspal mulus ini membentang, mengelilingi kawasan vital Balai Penyuluhan Pertanian (BPP) Mengwi, menjadikannya etalase hidup dari kekayaan pertanian lokal. Sambil berolahraga, pengunjung disuguhi pemandangan sawah berundak yang luas dan asri, dengan warna hijau atau kuning keemasan tergantung pada musim panen. Suasana tenang pedesaan, ditemani semilir angin sejuk dan lambaian pohon kelapa, menjadikan tempat ini lokasi yang sempurna untuk jogging, bersepeda, atau sekadar berjalan santai di pagi dan sore hari. Jalur ini bukan hanya fasilitas olahraga, tetapi juga ruang interaksi dengan alam dan kehidupan petani, memberikan kesempatan untuk melepaskan penat sambil menikmati keindahan otentik pedesaan Bali.", gambar: ["./joggingtrack_kantor_bpp_mengwi.jpeg"], kategori: "Olahraga & Rekreasi", fasilitas: ["Jalur Lari", "Pemandangan Sawah"], jam_operasional: "Terbuka untuk umum", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" },
-            { id: "wisata6", nama: "Jogging Track Munduk Babakan Sobangan", lat: -8.503550, lng: 115.193199, deskripsi_singkat: "Jalur lari dengan pemandangan alam perbukitan.", deskripsi_detail: "Jogging Track Munduk Babakan Sobangan adalah sebuah jalur tersembunyi yang menawarkan pengalaman lari dan berjalan kaki yang benar-benar menyatu dengan alam. Berlokasi di area perbukitan Munduk Babakan yang sejuk, jalur beton ini berkelok-kelok, membelah hamparan mozaik perkebunan subur yang terdiri dari sawah, tanaman palawija, dan dikelilingi oleh rimbunnya pepohonan kelapa. Tempat ini adalah pilihan ideal untuk memulai hari dengan olahraga pagi atau bersantai di sore hari, sambil menghirup udara bersih perbukitan dan menikmati ketenangan pedesaan yang otentik. Jauh dari kebisingan, jalur ini tidak hanya menyehatkan tubuh, tetapi juga menenangkan jiwa dengan pemandangan hijau khas Sobangan yang memanjakan mata.", gambar: ["./munduk_babakan_sobangan_jogging_track.jpeg"], kategori: "Olahraga & Rekreasi", fasilitas: ["Jalur Lari", "Pemandangan Alam", "Area Terbuka"], jam_operasional: "Terbuka untuk umum", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" }
-        ];
-        const dataUMKM = [
-            { id: "umkm3", nama: "Nang Kisnong Garden", lat: -8.490338522730275, lng: 115.194062022974, deskripsi_singkat: "Pusat bibit tanaman dan perlengkapan berkebun.", deskripsi_detail: "Nang Kisnong Garden menyediakan berbagai macam bibit tanaman hias, pot dalam berbagai ukuran dan bahan, serta media tanam berkualitas. Cocok bagi para penggemar berkebun untuk melengkapi koleksi atau memulai taman baru.", foto_produk: [], kategori: "Perlengkapan Taman", alamat_lengkap: "Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "08:00 - 18:00 WITA", kontak_person: "Tidak tersedia", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm4", nama: "Raya Koi Bali", lat: -8.491896060727917, lng: 115.18791726834016, deskripsi_singkat: "Toko khusus ikan hias Koi.", deskripsi_detail: "Toko ikan hias yang khusus menjual berbagai jenis ikan Koi berkualitas. Menyediakan juga pakan dan perlengkapan akuarium untuk para penghobi ikan.", foto_produk: [], kategori: "Toko Ikan Hias", alamat_lengkap: "Jl. Surapati, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 08351", jam_operasional: "07:00 - 22:00 WITA", kontak_person: "Tidak tersedia", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm5", nama: "Warung Tipat Cantok 'Ming Bonie'", lat: -8.491428866108134, lng: 115.19432333461874, deskripsi_singkat: "Warung makanan khas Bali, tipat cantok.", deskripsi_detail: "Warung sederhana yang menyajikan tipat cantok, makanan khas Bali dengan bumbu kacang yang lezat. Pilihan populer untuk makan siang atau malam bagi warga sekitar.", foto_produk: [], kategori: "Kuliner", alamat_lengkap: "Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "09:00 - 23:00 WITA", kontak_person: "087883985096", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm6", nama: "Ianas Cakes", lat: -8.493902257291305, lng: 115.19097642112543, deskripsi_singkat: "Toko kue dan roti rumahan.", deskripsi_detail: "Menyediakan berbagai macam kue, roti, dan jajanan untuk berbagai acara. Dibuat dengan resep rumahan yang lezat dan bahan berkualitas.", foto_produk: [], kategori: "Kuliner", alamat_lengkap: "Jl. Pahlawan No.18, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "08:00 - 17:00 WITA", kontak_person: "Tidak tersedia", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm7", nama: "Mahadewi Collection", lat: -8.494375273198429, lng: 115.19232040715166, deskripsi_singkat: "Toko perhiasan dengan rating tinggi.", deskripsi_detail: "Mahadewi Collection adalah sebuah toko perhiasan yang berlokasi di Sobangan, Mengwi. Toko ini dikenal memiliki rating yang sangat baik dari para pelanggannya.", foto_produk: [], kategori: "Toko Perhiasan", alamat_lengkap: "Jl. Pahlawan No.18, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "10:00 - 19:00 WITA", kontak_person: "0878-6030-5641", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm8", nama: "Warung Mina", lat: -8.496082185944866, lng: 115.19291865599867, deskripsi_singkat: "Toko bahan makanan.", deskripsi_detail: "Warung mina adalah sebuah toko yang menjual berbagai macam bahan makanan untuk kebutuhan sehari-hari.", foto_produk: [], kategori: "Toko Bahan Makanan", alamat_lengkap: "Jl. Pahlawan, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "Tidak tersedia", kontak_person: "Tidak tersedia", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm9", nama: "Pengerajin Rindik Buluh Perindu", lat: -8.500581774198764, lng: 115.19663883899838, deskripsi_singkat: "Pengrajin dan toko alat musik tradisional Rindik.", deskripsi_detail: "Pengerajin Rindik Buluh Perindu adalah sebuah toko yang menjual alat musik tradisional Bali, yaitu Rindik. Toko ini mendapatkan rating sempurna dari pelanggannya.", foto_produk: [], kategori: "Kerajinan Tangan", alamat_lengkap: "Jl. Pejuang 45, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "08:00 - 18:00 WITA", kontak_person: "0878-6192-4257", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm10", nama: "Biren Cakes", lat: -8.50072981847206, lng: 115.18964243657388, deskripsi_singkat: "Toko makanan sehat.", deskripsi_detail: "Biren cakes adalah toko makanan sehat yang mendapatkan rating sempurna dari pelanggannya. Menyediakan berbagai pilihan kue sehat.", foto_produk: [], kategori: "Toko Makanan Sehat", alamat_lengkap: "Sobangan, Kec. Mengwi, Kabupaten Badung, Denpasar, Bali 80351", jam_operasional: "08:00 - 22:00 WITA", kontak_person: "0877-6146-9066", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm11", nama: "Warung Pak Nova", lat: -8.501341275063876, lng: 115.18827080715289, deskripsi_singkat: "Toko kebutuhan sehari-hari.", deskripsi_detail: "Warung Pak Nova menyediakan berbagai kebutuhan pokok dan barang sehari-hari untuk warga sekitar.", foto_produk: [], kategori: "Toko", alamat_lengkap: "Jalan Pejuang No.45, Sobangan, Mengwi, Badung Regency, Bali 80351", jam_operasional: "06:00 - 21:00 WITA", kontak_person: "0851-0388-8632", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm12", nama: "Warung Ibu Oki", lat: -8.501702047252756, lng: 115.18833518016598, deskripsi_singkat: "Pusat perbelanjaan dengan rating tinggi.", deskripsi_detail: "Warung Ibu Oki adalah pusat perbelanjaan yang sangat direkomendasikan dengan rating 4.9 dari 10 ulasan.", foto_produk: [], kategori: "Pusat Perbelanjaan", alamat_lengkap: "F5XQ+78W, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "09:00 - 19:50 WITA", kontak_person: "0812-4628-3407", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { id: "umkm13", nama: "Warung Bapak Dewa", lat: -8.500067958732323, lng: 115.18881797778377, deskripsi_singkat: "Toko serba ada.", deskripsi_detail: "Warung Bapak Dewa merupakan toko yang menjual berbagai macam barang kebutuhan.", foto_produk: [], kategori: "Toko", alamat_lengkap: "Jalan Pejuang No.45, Sobangan, Mengwi, Badung Regency, Bali 80351", jam_operasional: "07:00 - 20:00 WITA", kontak_person: "0819-9914-6068", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)" },
-            { 
-        id: "umkm14", 
-        nama: "Pengrajin Rindik Suara Githa", 
-        lat: -8.502505435742403, 
-        lng: 115.19712953056339, 
-        deskripsi_singkat: "Asosiasi pengrajin independen alat musik rindik.", 
-        deskripsi_detail: "Pengrajin rindik suara githa adalah sebuah asosiasi bagi para pengrajin independen yang berfokus pada pembuatan alat musik tradisional Bali, rindik. Tempat ini menjadi pusat bagi para seniman untuk berkarya dan melestarikan warisan budaya melalui alunan merdu rindik. Mereka menawarkan produk-produk otentik yang dibuat dengan tangan terampil dan bahan-bahan berkualitas.", 
-        foto_produk: [], 
-        kategori: "Kerajinan Tangan", 
-        alamat_lengkap: "Jl. Kapten Japa, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "08:00 - 18:00 WITA", 
-        kontak_person: "0812-3609-424", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm15", 
-        nama: "Kedai Belog Polos", 
-        lat: -8.510435941750709, 
-        lng: 115.18794096530337, 
-        deskripsi_singkat: "Kuliner dengan rating sempurna yang menyajikan hidangan lokal.", 
-        deskripsi_detail: "Kedai Belog Polos adalah sebuah kuliner yang berhasil meraih rating sempurna 5.0 dari para pengunjungnya. Tempat ini menawarkan pengalaman kuliner yang otentik dengan berbagai hidangan lezat. Pengunjung dapat menikmati makanan di tempat atau memilih untuk dibawa pulang, menjadikannya pilihan yang fleksibel untuk berbagai kesempatan.", 
-        foto_produk: [], 
-        kategori: "Kuliner", 
-        alamat_lengkap: "Jl. Gunung Agung, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "18:00 - 00:00 WITA", 
-        kontak_person: "0878-5591-9222", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm16", 
-        nama: "Mistake Store", 
-        lat: -8.507158511065358, 
-        lng: 115.18793992297427, 
-        deskripsi_singkat: "Pusat perbelanjaan dan fashion dengan ulasan yang baik.", 
-        deskripsi_detail: "Mistake Store adalah sebuah pusat perbelanjaan yang menawarkan berbagai produk fashion dan apparel. Dengan rating 4.3 dari 7 ulasan, toko ini menjadi destinasi populer bagi mereka yang mencari gaya terkini. Mereka juga memiliki kehadiran online melalui blogspot, memungkinkan pelanggan untuk melihat koleksi mereka dari mana saja.", 
-        foto_produk: [], 
-        kategori: "Pusat Perbelanjaan", 
-        alamat_lengkap: "Jl. Gunung Agung No.10, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "10:00 - 22:00 WITA", 
-        kontak_person: "0812-4624-8971", 
-        link_ecommerce: "mistakeapparel.blogspot.co.id", 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm17", 
-        nama: "Kikyobag", 
-        lat: -8.50482814702848, 
-        lng: 115.18705262106995, 
-        deskripsi_singkat: "Toko khusus yang menjual berbagai macam tas.", 
-        deskripsi_detail: "Kikyobag adalah toko yang menjual berbagai macam jenis tas. Toko ini menawarkan koleksi tas wanita dengan beragam model dan warna, mulai dari tas tangan hingga tas selempang. Dengan koleksi yang beragam, toko ini menjadi tujuan yang tepat bagi para pecinta fashion yang mencari aksesoris untuk melengkapi penampilan mereka.", 
-        foto_produk: [], 
-        kategori: "Toko Tas", 
-        alamat_lengkap: "Jl. Gunung Agung No.10, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "09:00 - 17:00 WITA", 
-        kontak_person: "0821-4564-6430", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm18", 
-        nama: "Vegetarian hari", 
-        lat: -8.503564954056982, 
-        lng: 115.18620686655282, 
-        deskripsi_singkat: "Kuliner vegetarian dengan rating sempurna.", 
-        deskripsi_detail: "Vegetarian hari adalah sebuah kuliner yang menyajikan hidangan khusus vegetarian dan telah mendapatkan rating sempurna 5.0 dari 10 ulasan. Tempat ini menjadi surga bagi para pencari makanan sehat dan lezat tanpa daging. Pelanggan dapat memilih untuk menikmati hidangan mereka di tempat atau membawanya pulang, memberikan kemudahan bagi para pecinta kuliner nabati.", 
-        foto_produk: [], 
-        kategori: "Kuliner", 
-        alamat_lengkap: "Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "09:00 - 17:00 WITA", 
-        kontak_person: "0822-3653-5889", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm19", 
-        nama: "Lalapan Nasi Goreng Jawa", 
-        lat: -8.503495983264724, 
-        lng: 115.18625782852153, 
-        deskripsi_singkat: "Kuliner nasi goreng khas Jawa dengan rating sempurna.", 
-        deskripsi_detail: "Lalapan Nasi Goreng Jawa adalah Kuliner yang menjual hidangan nasi goreng dengan cita rasa khas Jawa. Meraih rating sempurna 5.0, tempat ini menjadi favorit bagi para penikmat kuliner. Kuliner ini menyediakan opsi makan di tempat dan bawa pulang, cocok untuk makan malam yang memuaskan hingga larut malam.", 
-        foto_produk: [],
-        kategori: "Kuliner", 
-        alamat_lengkap: "F5WP+HGR, Jl. Gunung Agung, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "17:00 - 23:00 WITA", 
-        kontak_person: "0822-3536-3086", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm20", 
-        nama: "MOUREN LAUNDRY", 
-        lat: -8.503563627695707, 
-        lng: 115.18627459232702, 
-        deskripsi_singkat: "Jasa laundry dengan ulasan sempurna.", 
-        deskripsi_detail: "MOUREN LAUNDRY adalah penyedia jasa laundry yang mendapatkan kepercayaan penuh dari pelanggannya, terbukti dengan rating 5.0 dari 5 ulasan. Mereka menawarkan solusi praktis untuk kebutuhan mencuci pakaian, memastikan pakaian bersih dan rapi. Layanan mereka yang andal menjadikannya pilihan utama di komunitas sekitar.", 
-        foto_produk: [], 
-        kategori: "Laundry", 
-        alamat_lengkap: "Jl. Gunung Agung No.Br, Dukuh Moncos, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "07:00 - 19:00 WITA", 
-        kontak_person: "0813-6168-2019", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm21", 
-        nama: "TOKO SEDANA HARTA", 
-        lat: -8.50189350681066, 
-        lng: 115.18849915812815, 
-        deskripsi_singkat: "Minimarket yang lengkap dan sangat direkomendasikan.", 
-        deskripsi_detail: "TOKO SEDANA HARTA adalah sebuah minimarket yang menyediakan berbagai macam produk kebutuhan sehari-hari. Dengan rating sempurna 5.0 dari 8 ulasan, toko ini dikenal dengan kelengkapan barang dan pelayanannya yang memuaskan. Tempat ini menjadi solusi satu atap bagi warga untuk berbelanja kebutuhan pokok, makanan ringan, hingga minuman.", 
-        foto_produk: [], 
-        kategori: "Minimarket", 
-        alamat_lengkap: "Jl. Pejuang 45, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", 
-        jam_operasional: "24 jam", 
-        kontak_person: "0813-3836-7811", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
-    },
-    { 
-        id: "umkm22", 
-        nama: "Wr. Bali Suci", 
-        lat: -8.499143775808443, 
-        lng: 115.19330286312733, 
-        deskripsi_singkat: "Pusat perbelanjaan dengan rating sempurna.", 
-        deskripsi_detail: "Wr. Bali Suci adalah pusat perbelanjaan yang menawarkan berbagai macam produk, terlihat dari etalase yang penuh dengan aneka makanan ringan dan kebutuhan lainnya. Toko ini berhasil mendapatkan rating 5.0, menunjukkan kepuasan pelanggan yang tinggi terhadap produk dan layanan yang ditawarkan. Buka dari pagi hari, toko ini siap melayani kebutuhan harian para pelanggannya.", 
-        foto_produk: [], 
-        kategori: "Pusat Perbelanjaan", 
-        alamat_lengkap: "Jl. Veteran, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80352", 
-        jam_operasional: "06:00 - 21:00 WITA", 
-        kontak_person: "Tidak tersedia", 
-        link_ecommerce: null, 
-        iconClass: "fa-map-marker-alt", 
-        iconColor: "var(--accent-color)" 
+    // --- GLOBAL VARIABLES & CONSTANTS ---
+    const initialCoords = [-8.502, 115.192];
+    const initialZoom = 15;
+    let dataWisata = [];
+    let dataUMKM = [];
+    let map, wisataLayerGroup, umkmLayerGroup, layerControl;
+    let featureList, modal, modalTitle, modalBodyContent;
+    let routingControl = null;
+    let userMarker = null;
+
+    // Initial data (only loaded if local storage is empty)
+    const initialDataWisata = [
+         { id: "wisata3", nama: "Tugu Pahlawan Kapten Tjok. Agung Tresna", lat: -8.497394, lng: 115.195481, deskripsi_singkat: "Monumen untuk mengenang jasa pahlawan.", deskripsi_detail: "Tugu Pahlawan Kapten Tjok. Agung Tresna merupakan sebuah monumen bersejarah yang berdiri kokoh di Desa Sobangan sebagai wujud penghormatan abadi atas jasa dan pengorbanan heroik Kapten Anumerta Tjokorda Agung Tresna. Lokasi ini memiliki makna yang mendalam, karena Desa Sobangan pernah menjadi Markas Besar Pandawa, pusat komando perjuangan gerilya yang dipimpin oleh Kapten Tjok. Agung Tresna melawan tentara NICA. Dibangun atas inisiatif dan swadaya masyarakat setempat sekitar tahun 1953, pendirian tugu ini juga dilandasi oleh sebuah keyakinan spiritual setelah munculnya pertanda gaib yang diyakini sebagai keinginan arwah sang pahlawan untuk diabadikan di tanah tempat ia berjuang bersama rakyat yang setia. Lebih dari sekadar penanda fisik, monumen ini adalah simbol ikatan batin yang kuat antara seorang pahlawan dengan masyarakatnya, serta menjadi pengingat sejarah perjuangan kemerdekaan bagi seluruh generasi di Desa Sobangan.", gambar: ["./tugu_pahlawan.jpeg"], kategori: "Monumen & Sejarah", fasilitas: ["Area Terbuka", "Akses Umum"], jam_operasional: "Terbuka 24 Jam", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" },
+         { id: "wisata4", nama: "Lapangan Umum Kapten Tjok. Agung Tresna", lat: -8.497291, lng: 115.195171, deskripsi_singkat: "Fasilitas olahraga dan ruang terbuka hijau.", deskripsi_detail: "Mengabadikan nama dan semangat sang pahlawan, Lapangan Umum Kapten Tjok. Agung Tresna merupakan jantung dari kehidupan sosial dan olahraga bagi masyarakat Desa Sobangan. Hamparan rumput hijau yang terawat ini tidak pernah sepi dari aktivitas, mulai dari riuh oleh sorak-sorai anak-anak dan pemuda yang berlatih sepak bola setiap sore, hingga menjadi lokasi utama untuk berbagai perayaan desa, upacara, dan kegiatan rekreasi bersama. Lebih dari sekadar fasilitas olahraga, lapangan ini adalah ruang terbuka tempat terjalinnya kebersamaan, tumbuhnya bibit-bibit atlet lokal, dan dilestarikannya semangat komunal yang menjadi ciri khas warga Desa Sobangan.", gambar: ["./lapangan_bolaumum.jpeg"], kategori: "Olahraga & Rekreasi", fasilitas: ["Lapangan Bola", "Area Terbuka"], jam_operasional: "Terbuka untuk umum", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" },
+         { id: "wisata5", nama: "Uma Pacung Jogging Track", lat: -8.484339, lng: 115.187119, deskripsi_singkat: "Jalur lari di sekitar area persawahan.", deskripsi_detail: "Uma Pacung Jogging Track adalah sebuah oase hijau yang menawarkan pengalaman rekreasi unik di tengah lanskap agraris Desa Sobangan. Jalur aspal mulus ini membentang, mengelilingi kawasan vital Balai Penyuluhan Pertanian (BPP) Mengwi, menjadikannya etalase hidup dari kekayaan pertanian lokal. Sambil berolahraga, pengunjung disuguhi pemandangan sawah berundak yang luas dan asri, dengan warna hijau atau kuning keemasan tergantung pada musim panen. Suasana tenang pedesaan, ditemani semilir angin sejuk dan lambaian pohon kelapa, menjadikan tempat ini lokasi yang sempurna untuk jogging, bersepeda, atau sekadar berjalan santai di pagi dan sore hari. Jalur ini bukan hanya fasilitas olahraga, tetapi juga ruang interaksi dengan alam dan kehidupan petani, memberikan kesempatan untuk melepaskan penat sambil menikmati keindahan otentik pedesaan Bali.", gambar: ["./joggingtrack_kantor_bpp_mengwi.jpeg"], kategori: "Olahraga & Rekreasi", fasilitas: ["Jalur Lari", "Pemandangan Sawah"], jam_operasional: "Terbuka untuk umum", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" },
+         { id: "wisata6", nama: "Jogging Track Munduk Babakan Sobangan", lat: -8.503550, lng: 115.193199, deskripsi_singkat: "Jalur lari dengan pemandangan alam perbukitan.", deskripsi_detail: "Jogging Track Munduk Babakan Sobangan adalah sebuah jalur tersembunyi yang menawarkan pengalaman lari dan berjalan kaki yang benar-benar menyatu dengan alam. Berlokasi di area perbukitan Munduk Babakan yang sejuk, jalur beton ini berkelok-kelok, membelah hamparan mozaik perkebunan subur yang terdiri dari sawah, tanaman palawija, dan dikelilingi oleh rimbunnya pepohonan kelapa. Tempat ini adalah pilihan ideal untuk memulai hari dengan olahraga pagi atau bersantai di sore hari, sambil menghirup udara bersih perbukitan dan menikmati ketenangan pedesaan yang otentik. Jauh dari kebisingan, jalur ini tidak hanya menyehatkan tubuh, tetapi juga menenangkan jiwa dengan pemandangan hijau khas Sobangan yang memanjakan mata.", gambar: ["./munduk_babakan_sobangan_jogging_track.jpeg"], kategori: "Olahraga & Rekreasi", fasilitas: ["Jalur Lari", "Pemandangan Alam", "Area Terbuka"], jam_operasional: "Terbuka untuk umum", iconClass: "fa-map-marker-alt", iconColor: "var(--secondary-color)" }
+    ];
+    const initialDataUMKM = [
+        { id: "umkm3", nama: "Nang Kisnong Garden", lat: -8.490338522730275, lng: 115.194062022974, deskripsi_singkat: "Pusat bibit tanaman dan perlengkapan berkebun.", deskripsi_detail: "Nang Kisnong Garden menyediakan berbagai macam bibit tanaman hias, pot dalam berbagai ukuran dan bahan, serta media tanam berkualitas. Cocok bagi para penggemar berkebun untuk melengkapi koleksi atau memulai taman baru.", foto_produk: [], kategori: "Perlengkapan Taman", alamat_lengkap: "Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "08:00 - 18:00 WITA", kontak_person: "Tidak tersedia", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)", fasilitas: ["Toko Fisik", "Area Parkir"] },
+        { id: "umkm4", nama: "Raya Koi Bali", lat: -8.491896060727917, lng: 115.18791726834016, deskripsi_singkat: "Toko khusus ikan hias Koi.", deskripsi_detail: "Toko ikan hias yang khusus menjual berbagai jenis ikan Koi berkualitas. Menyediakan juga pakan dan perlengkapan akuarium untuk para penghobi ikan.", foto_produk: [], kategori: "Toko Ikan Hias", alamat_lengkap: "Jl. Surapati, Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 08351", jam_operasional: "07:00 - 22:00 WITA", kontak_person: "Tidak tersedia", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)", fasilitas: ["Toko Fisik"] },
+        { id: "umkm5", nama: "Warung Tipat Cantok 'Ming Bonie'", lat: -8.491428866108134, lng: 115.19432333461874, deskripsi_singkat: "Warung makanan khas Bali, tipat cantok.", deskripsi_detail: "Warung sederhana yang menyajikan tipat cantok, makanan khas Bali dengan bumbu kacang yang lezat. Pilihan populer untuk makan siang atau malam bagi warga sekitar.", foto_produk: [], kategori: "Kuliner", alamat_lengkap: "Sobangan, Kec. Mengwi, Kabupaten Badung, Bali 80351", jam_operasional: "09:00 - 23:00 WITA", kontak_person: "087883985096", link_ecommerce: null, iconClass: "fa-map-marker-alt", iconColor: "var(--accent-color)", fasilitas: ["Makan di Tempat", "Bawa Pulang"] }
+    ];
+        
+    // --- DATA HANDLING (CRUD) FUNCTIONS ---
+    function saveDataToLocalStorage() {
+        localStorage.setItem('dataWisata', JSON.stringify(dataWisata));
+        localStorage.setItem('dataUMKM', JSON.stringify(dataUMKM));
     }
-        ];
-        
-        // --- (Sisa JavaScript tidak berubah) ---
-        let map, wisataLayerGroup, umkmLayerGroup, layerControl;
-        let featureList, modal, modalTitle, modalBodyContent, spanClose;
-        let routingControl = null;
-        let userMarker = null;
 
-        // PERBAIKAN: Mengaktifkan GPS asli dari perangkat.
-        const USE_REAL_GPS = true; 
-        const SIMULATED_CURRENT_LOCATION = { lat: -8.5025, lng: 115.1915 }; // Hanya sebagai fallback jika GPS asli gagal.
-
-        function createCustomLeafletIcon(iconClass, color) {
-            return L.divIcon({
-                html: `<i class="fas ${iconClass}" style="color: ${color};"></i>`,
-                className: 'custom-leaflet-div-icon',
-                iconSize: [30, 30], 
-                iconAnchor: [15, 30], 
-                popupAnchor: [0, -30]  
-            });
+    function loadDataFromLocalStorage() {
+        const storedWisata = localStorage.getItem('dataWisata');
+        const storedUMKM = localStorage.getItem('dataUMKM');
+        if (storedWisata && storedUMKM) {
+            dataWisata = JSON.parse(storedWisata);
+            dataUMKM = JSON.parse(storedUMKM);
+        } else {
+            dataWisata = initialDataWisata;
+            dataUMKM = initialDataUMKM;
+            saveDataToLocalStorage();
         }
+    }
 
-        function getCurrentLocation(callback) {
-            if (USE_REAL_GPS && navigator.geolocation) {
-                map.locate({ setView: false, maxZoom: 17, enableHighAccuracy: true });
-                map.once('locationfound', function(e) { 
-                    callback(e.latlng); 
-                });
-                map.once('locationerror', function(e) { 
-                    alert("Gagal mendapatkan lokasi GPS: " + e.message + "\nPastikan Anda telah mengizinkan akses lokasi di peramban Anda.");
-                });
+    function showAddForm() {
+        document.getElementById('crudForm').reset();
+        document.getElementById('crudItemId').value = '';
+        document.getElementById('crudModalTitle').innerHTML = '<i class="fas fa-plus-circle"></i> Tambah Data Baru';
+        document.getElementById('crudModal').style.display = 'block';
+        toggleUMKMFields();
+    }
+
+    function showEditForm(id, type) {
+        const dataArray = type === 'wisata' ? dataWisata : dataUMKM;
+        const item = dataArray.find(d => d.id === id);
+        if (!item) return;
+
+        document.getElementById('infoModal').style.display = 'none';
+        document.getElementById('crudItemId').value = item.id;
+        document.getElementById('crudItemType').value = type;
+        document.getElementById('crudNama').value = item.nama;
+        document.getElementById('crudLat').value = item.lat;
+        document.getElementById('crudLng').value = item.lng;
+        document.getElementById('crudDeskripsi').value = item.deskripsi_detail;
+        document.getElementById('crudKategori').value = item.kategori;
+        document.getElementById('crudJamOperasional').value = item.jam_operasional || '';
+        document.getElementById('crudFasilitas').value = Array.isArray(item.fasilitas) ? item.fasilitas.join(', ') : '';
+        if (type === 'umkm') {
+             document.getElementById('crudAlamat').value = item.alamat_lengkap || '';
+             document.getElementById('crudKontak').value = item.kontak_person || '';
+        }
+        toggleUMKMFields();
+        document.getElementById('crudModalTitle').innerHTML = '<i class="fas fa-edit"></i> Edit Data Lokasi';
+        document.getElementById('crudModal').style.display = 'block';
+    }
+
+    function handleDeleteItem(id, type) {
+        if (!confirm('Apakah Anda yakin ingin menghapus data ini? Aksi ini tidak dapat dibatalkan.')) { return; }
+        if (type === 'wisata') {
+            dataWisata = dataWisata.filter(item => item.id !== id);
+        } else {
+            dataUMKM = dataUMKM.filter(item => item.id !== id);
+        }
+        saveDataToLocalStorage();
+        populateSidebarAndMarkers();
+        document.getElementById('infoModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function toggleUMKMFields() {
+        const type = document.getElementById('crudItemType').value;
+        const umkmFields = document.getElementById('umkmFields');
+        const alamatInput = document.getElementById('crudAlamat');
+        if (type === 'umkm') {
+            umkmFields.style.display = 'block';
+            alamatInput.required = true;
+        } else {
+            umkmFields.style.display = 'none';
+            alamatInput.required = false;
+        }
+    }
+
+    function handleCrudFormSubmit(event) {
+        event.preventDefault();
+        const id = document.getElementById('crudItemId').value;
+        const type = document.getElementById('crudItemType').value;
+        const fasilitasValue = document.getElementById('crudFasilitas').value;
+        const jamOperasionalValue = document.getElementById('crudJamOperasional').value;
+        const newItemData = {
+            id: id || `${type}-${Date.now()}`,
+            nama: document.getElementById('crudNama').value,
+            lat: parseFloat(document.getElementById('crudLat').value),
+            lng: parseFloat(document.getElementById('crudLng').value),
+            deskripsi_detail: document.getElementById('crudDeskripsi').value,
+            deskripsi_singkat: document.getElementById('crudDeskripsi').value.substring(0, 50) + '...',
+            kategori: document.getElementById('crudKategori').value,
+            jam_operasional: jamOperasionalValue || "Informasi belum tersedia",
+            fasilitas: fasilitasValue ? fasilitasValue.split(',').map(f => f.trim()).filter(f => f) : ["Informasi belum tersedia"],
+            iconClass: "fa-map-marker-alt"
+        };
+        if (type === 'wisata') {
+            newItemData.gambar = [];
+            newItemData.iconColor = "var(--secondary-color)";
+            if (id) {
+                const index = dataWisata.findIndex(item => item.id === id);
+                dataWisata[index] = { ...dataWisata[index], ...newItemData };
             } else {
-                console.log("GPS tidak didukung atau mode simulasi aktif.");
-                const simulatedLatLng = L.latLng(SIMULATED_CURRENT_LOCATION.lat, SIMULATED_CURRENT_LOCATION.lng);
-                callback(simulatedLatLng);
+                dataWisata.push(newItemData);
+            }
+        } else {
+             newItemData.alamat_lengkap = document.getElementById('crudAlamat').value;
+             newItemData.kontak_person = document.getElementById('crudKontak').value;
+             newItemData.iconColor = "var(--accent-color)";
+            if (id) {
+                const index = dataUMKM.findIndex(item => item.id === id);
+                dataUMKM[index] = { ...dataUMKM[index], ...newItemData };
+            } else {
+                dataUMKM.push(newItemData);
             }
         }
-        
-        function handleRouteButtonClick(lat, lng, name) {
-            if (modal) {
-                modal.style.display = "none";
-                document.body.style.overflow = 'auto';
-            }
-            setupRoutingPanel(lat, lng, name);
+        saveDataToLocalStorage();
+        populateSidebarAndMarkers();
+        document.getElementById('crudModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+
+    // --- UI & MAP FUNCTIONS ---
+    function createCustomLeafletIcon(iconClass, color) {
+        return L.divIcon({
+            html: `<i class="fas ${iconClass}" style="color: ${color};"></i>`,
+            className: 'custom-leaflet-div-icon',
+            iconSize: [30, 30], 
+            iconAnchor: [15, 30], 
+            popupAnchor: [0, -30]  
+        });
+    }
+    
+    function handleRouteButtonClick(lat, lng, nama) {
+        if (modal) {
+            modal.style.display = "none";
+        }
+        document.body.style.overflow = 'auto';
+
+        if (!navigator.geolocation) {
+            alert("Geolocation tidak didukung oleh browser Anda.");
+            return;
         }
 
-        function openModalWithDetails(item, type) {
-            if (!modal || !modalTitle || !modalBodyContent) { return; }
-            let contentHtml = '';
-            let titleIconHtml = ''; 
-            const modalIconClass = "fa-map-marker-alt"; 
-            
-            const routeButtonHtml = `
-                <div class="route-button-container">
-                    <button class="route-button" onclick="handleRouteButtonClick(${item.lat}, ${item.lng}, '${item.nama.replace(/'/g, "\\'")}')">
-                        <i class="fas fa-directions"></i> Dapatkan Rute ke Sini
-                    </button>
-                </div>
-            `;
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLat = position.coords.latitude;
+                const userLng = position.coords.longitude;
+                const startPoint = L.latLng(userLat, userLng);
+                const endPoint = L.latLng(lat, lng);
 
-            if (type === 'wisata') {
-                titleIconHtml = `<i class="fas ${modalIconClass}" style="color:${item.iconColor}"></i> ${item.nama}`;
-                contentHtml = `
-                    <img src="${item.gambar[0]}" alt="${item.nama}" class="main-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x280.png?text=Gambar+Tidak+Tersedia';">
-                    <h4><i class="fas fa-info-circle"></i> Deskripsi</h4> <p>${item.deskripsi_detail}</p>
-                    <h4><i class="fas fa-tags"></i> Kategori</h4> <p>${item.kategori}</p>
-                    <h4><i class="fas fa-concierge-bell"></i> Fasilitas</h4> <ul>${item.fasilitas.map(f => `<li><i class="fas fa-check-circle fa-li-icon"></i>${f}</li>`).join('')}</ul>
-                    <h4><i class="fas fa-clock"></i> Jam Operasional</h4> <p>${item.jam_operasional}</p>
-                    ${routeButtonHtml}`;
-            } else if (type === 'umkm') {
-    titleIconHtml = `<i class="fas fa-map-marker-alt" style="color:${item.iconColor}"></i> ${item.nama}`;
-    contentHtml = `
-        <h4><i class="fas fa-info-circle"></i> Deskripsi Produk/Jasa</h4> 
-        <p>${item.deskripsi_detail}</p>
-
-        <h4><i class="fas fa-store-alt"></i> Kategori UMKM</h4> 
-        <p>${item.kategori}</p>
-
-        <h4><i class="fas fa-map-marker-alt"></i> Alamat</h4> 
-        <p>${item.alamat_lengkap}</p>
-
-        <h4><i class="fas fa-clock"></i> Jam Operasional</h4> 
-        <p>${item.jam_operasional}</p>
-
-        <h4><i class="fas fa-phone-alt"></i> Kontak</h4> 
-        <p>${item.kontak_person || 'Tidak tersedia'}</p>
-
-        ${item.link_ecommerce ? `<h4><i class="fas fa-shopping-cart"></i> Toko Online</h4><p><a href="https://${item.link_ecommerce}" target="_blank" class="contact-link">Kunjungi Toko</a></p>` : ''}
-        
-        ${routeButtonHtml}`;
-}
-            modalTitle.innerHTML = titleIconHtml;
-            modalBodyContent.innerHTML = contentHtml;
-            modal.style.display = "block";
-            document.body.style.overflow = 'hidden'; 
-        }
-
-        function populateSidebarAndMarkers() {
-            if (!featureList || !wisataLayerGroup || !umkmLayerGroup) { return; }
-            featureList.innerHTML = ''; 
-            wisataLayerGroup.clearLayers(); 
-            umkmLayerGroup.clearLayers();   
-            
-            dataWisata.forEach(item => {
-                const marker = L.marker([item.lat, item.lng], { icon: createCustomLeafletIcon(item.iconClass, item.iconColor) });
-                marker.on('click', () => openModalWithDetails(item, 'wisata'));
-                wisataLayerGroup.addLayer(marker); 
-                const listItem = createSidebarItem(item, 'wisata', marker);
-                featureList.appendChild(listItem);
-            });
-            dataUMKM.forEach(item => {
-                const marker = L.marker([item.lat, item.lng], { icon: createCustomLeafletIcon(item.iconClass, item.iconColor) });
-                marker.on('click', () => openModalWithDetails(item, 'umkm'));
-                umkmLayerGroup.addLayer(marker); 
-                const listItem = createSidebarItem(item, 'umkm', marker);
-                featureList.appendChild(listItem);
-            });
-            document.getElementById('total-wisata').textContent = dataWisata.length;
-            document.getElementById('total-umkm').textContent = dataUMKM.length;
-        }
-        
-        function createSidebarItem(item, type, markerInstance) {
-            const listItem = document.createElement('div');
-            listItem.className = 'sidebar-item';
-            listItem.innerHTML = `
-                <i class="fas ${item.iconClass} fa-icon" style="color: ${item.iconColor};"></i> 
-                <span class="item-name">${item.nama}</span>
-                <span class="item-type">${type === 'wisata' ? 'Wisata' : 'UMKM'} - ${item.kategori}</span>`;
-            listItem.onclick = () => {
-                map.flyTo([item.lat, item.lng], 16, { animate: true, duration: 1 });
-                setTimeout(() => { openModalWithDetails(item, type); }, 600); 
-            };
-            return listItem;
-        }
-        
-        let layerControlMoved = false;
-        function moveLayerControlToSidebarOnce() {
-            if (layerControlMoved || !layerControl) return; 
-            const filterControlsDiv = document.querySelector('.filter-controls');
-            const controlContainer = layerControl.getContainer();
-            if (filterControlsDiv && controlContainer) {
-                filterControlsDiv.appendChild(controlContainer);
-                layerControlMoved = true;
-            }
-        }
-
-        function initModal() {
-            if (!modal || !spanClose) return;
-            spanClose.onclick = function() {
-                modal.style.display = "none";
-                document.body.style.overflow = 'auto';
-            }
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    document.body.style.overflow = 'auto';
-                }
-            }
-            document.addEventListener('keydown', function(event) {
-                if (event.key === "Escape" && modal.style.display === "block") {
-                    modal.style.display = "none";
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        }
-        
-        function addCustomRoutingUI(routingControl) {
-            const container = routingControl.getContainer();
-            if (!container) return;
-
-            let existingSuggestions = container.querySelector('.routing-suggestions-container');
-            if (existingSuggestions) { existingSuggestions.remove(); }
-
-            const suggestionsContainer = L.DomUtil.create('div', 'routing-suggestions-container');
-            
-            const yourLocationItem = L.DomUtil.create('div', 'routing-suggestion-item', suggestionsContainer);
-            yourLocationItem.innerHTML = `
-                <div class="suggestion-icon"><i class="fas fa-location-crosshairs"></i></div>
-                <span class="suggestion-text">Lokasi Anda</span>
-            `;
-
-            L.DomEvent.on(yourLocationItem, 'click', function() {
-                getCurrentLocation(function(latlng) {
-                    routingControl.spliceWaypoints(0, 1, { latLng: latlng, name: 'Lokasi Anda' });
-                    map.panTo(latlng);
-                });
-            });
-
-            const geocodersContainer = container.querySelector('.leaflet-routing-geocoders');
-            if (geocodersContainer) {
-                geocodersContainer.parentNode.insertBefore(suggestionsContainer, geocodersContainer.nextSibling);
-            }
-
-            const swapButton = container.querySelector('.leaflet-routing-add-waypoint');
-            if (swapButton) {
-                L.DomEvent.on(swapButton, 'click', function() {
-                    const waypoints = routingControl.getWaypoints();
-                    routingControl.setWaypoints(waypoints.reverse());
-                });
-            }
-        }
-
-        function setupRoutingPanel(destinationLat, destinationLng, destinationName) {
-            if (routingControl != null) {
-                map.removeControl(routingControl);
-                routingControl = null;
-            }
-
-            routingControl = L.Routing.control({
-                waypoints: [
-                    null,
-                    L.Routing.waypoint(L.latLng(destinationLat, destinationLng), destinationName)
-                ],
-                geocoder: L.Control.Geocoder.nominatim(),
-                show: true, 
-                addWaypoints: true,
-                routeWhileDragging: true,
-                fitSelectedRoutes: 'smart',
-                geocoderPlaceholder: function(i, n) {
-                    return i === 0 ? 'Pilih titik awal, atau klik peta...' : 'Pilih tujuan...';
-                },
-                lineOptions: {
-                    styles: [{ color: 'var(--primary-color)', opacity: 0.8, weight: 6 }]
-                },
-                createMarker: function(i, waypoint, n) {
-                    if (!waypoint.latLng) return null;
-                    const icon = createCustomLeafletIcon(i === 0 ? 'fa-location-arrow' : 'fa-map-marker-alt', i === 0 ? 'green' : 'var(--primary-color)');
-                    return L.marker(waypoint.latLng, { draggable: true, icon: icon });
-                }
-            }).addTo(map);
-
-            addCustomRoutingUI(routingControl);
-            
-            routingControl.on('routingstart', function(e) {
-                const container = this.getContainer();
-                if(container) {
-                    const itinerary = container.querySelector('.leaflet-routing-itinerary-container');
-                    const suggestions = container.querySelector('.routing-suggestions-container');
-                    if (itinerary) itinerary.style.display = 'none';
-                    if (suggestions) suggestions.style.display = 'block';
-                }
-            });
-
-            routingControl.on('routesfound', function(e) {
-                const container = this.getContainer();
-                if(container) {
-                    const itinerary = container.querySelector('.leaflet-routing-itinerary-container');
-                    const suggestions = container.querySelector('.routing-suggestions-container');
-                    if (itinerary) itinerary.style.display = 'block';
-                    if (suggestions) suggestions.style.display = 'none';
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            featureList = document.getElementById('feature-list');
-            modal = document.getElementById('infoModal');
-            modalTitle = document.getElementById('modalTitle');
-            modalBodyContent = document.getElementById('modalBodyContent');
-            spanClose = document.getElementsByClassName("close-button")[0];
-
-            if (!featureList || !modal || !modalTitle || !modalBodyContent || !spanClose) {
-                console.error("Satu atau lebih elemen DOM penting tidak ditemukan.");
-                return; 
-            }
-            initModal(); 
-
-            const disclaimerModal = document.getElementById('disclaimerModal');
-            const disclaimerCloseBtn = document.getElementById('disclaimerCloseBtn');
-
-            if (!sessionStorage.getItem('disclaimerAccepted')) {
-                disclaimerModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; 
-            }
-
-            disclaimerCloseBtn.onclick = function() {
-                disclaimerModal.style.display = 'none';
-                sessionStorage.setItem('disclaimerAccepted', 'true'); 
-                document.body.style.overflow = 'auto'; 
-            }
-
-            map = L.map('map', { zoomControl: false }).setView(initialCoords, 15);
-            
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors & OSRM'
-            }).addTo(map);
-
-            const toggleBtn = document.getElementById('toggle-sidebar-btn');
-            const sidebar = document.getElementById('sidebar');
-
-            if (toggleBtn && sidebar) {
-                toggleBtn.addEventListener('click', () => {
-                    sidebar.classList.toggle('closed');
-                    // Beri tahu peta untuk menyesuaikan ukurannya setelah animasi selesai
-                    setTimeout(() => {
-                        if (map) {
-                            map.invalidateSize();
-                        }
-                    }, 300); // Sesuaikan dengan durasi transisi CSS
-                });
-            }
-
-            wisataLayerGroup = L.layerGroup().addTo(map); 
-            umkmLayerGroup = L.layerGroup().addTo(map);   
-
-            L.control.zoom({ position: 'topleft' }).addTo(map);
-            L.Control.geocoder({
-                defaultMarkGeocode: false, placeholder: 'Cari alamat atau tempat...', position: 'topleft', 
-                geocoder: L.Control.Geocoder.nominatim(), collapsed: true, iconLabel: '' 
-            })
-            .on('markgeocode', function(e) {
-                var b = e.geocode.bbox; map.fitBounds(L.polygon([b.getSouthEast(),b.getNorthEast(),b.getNorthWest(),b.getSouthWest()]).getBounds());
-            })
-            .addTo(map);
-
-            const locateButton = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
-            const locateLink = L.DomUtil.create('a', 'leaflet-control-locate', locateButton);
-            locateLink.href = '#'; locateLink.title = 'Lokasi Saya';
-            locateLink.innerHTML = '<i class="fas fa-street-view"></i>'; 
-            
-            L.DomEvent.on(locateLink, 'click', function(ev) { 
-                L.DomEvent.stop(ev); 
-                if (routingControl != null) {
+                if (routingControl) {
                     map.removeControl(routingControl);
-                    routingControl = null;
                 }
-                getCurrentLocation(function(latlng) {
-                    map.flyTo(latlng, 17);
+                
+                routingControl = L.Routing.control({
+                    waypoints: [
+                        L.Routing.waypoint(startPoint, "Lokasi Anda"),
+                        L.Routing.waypoint(endPoint, nama)
+                    ],
+                    routeWhileDragging: true,
+                    geocoder: L.Control.Geocoder.nominatim(),
+                    addWaypoints: false,
+                    draggableWaypoints: false,
+                    fitSelectedRoutes: true,
+                    show: true,
+                    lineOptions: {
+                        styles: [{ color: 'var(--primary-color)', opacity: 0.8, weight: 6 }]
+                    },
+                    createMarker: function(i, waypoint, n) {
+                        const markerIcon = i === 0 
+                            ? createCustomLeafletIcon('fa-location-arrow', 'var(--primary-color)') 
+                            : createCustomLeafletIcon('fa-map-marker-alt', 'var(--secondary-color)');
+                        return L.marker(waypoint.latLng, { icon: markerIcon });
+                    }
+                }).addTo(map);
+            },
+            () => {
+                alert("Tidak dapat mengambil lokasi Anda. Pastikan Anda mengizinkan akses lokasi.");
+            },
+            { enableHighAccuracy: true }
+        );
+    }
+
+    function openModalWithDetails(item, type) {
+        if (!modal || !modalTitle || !modalBodyContent) { return; }
+        const actionButtonsHtml = `
+            <div class="route-button-container" style="display: flex; gap: 10px;">
+                <button class="route-button" style="flex: 1;" onclick="handleRouteButtonClick(${item.lat}, ${item.lng}, '${item.nama.replace(/'/g, "\\'")}')"><i class="fas fa-directions"></i> Rute</button>
+                <button class="route-button" style="flex: 1; background-color: var(--accent-color);" onclick="showEditForm('${item.id}', '${type}')"><i class="fas fa-edit"></i> Edit</button>
+                <button class="route-button" style="flex: 1; background-color: #ef4444;" onclick="handleDeleteItem('${item.id}', '${type}')"><i class="fas fa-trash"></i> Hapus</button>
+            </div>`;
+        let contentHtml = '';
+        let titleIconHtml = `<i class="fas fa-map-marker-alt" style="color:${item.iconColor}"></i> ${item.nama}`;
+        const fasilitasHtml = Array.isArray(item.fasilitas) && item.fasilitas.length > 0 && item.fasilitas[0] !== "Informasi belum tersedia"
+            ? `<h4><i class="fas fa-concierge-bell"></i> Fasilitas</h4> <ul>${item.fasilitas.map(f => `<li><i class="fas fa-check-circle fa-li-icon"></i>${f}</li>`).join('')}</ul>`
+            : '<h4><i class="fas fa-concierge-bell"></i> Fasilitas</h4><p>Informasi fasilitas belum tersedia.</p>';
+        if (type === 'wisata') {
+            contentHtml = `<img src="${item.gambar && item.gambar.length > 0 ? item.gambar[0] : ''}" alt="${item.nama}" class="main-image" onerror="this.style.display='none';">
+                <h4><i class="fas fa-info-circle"></i> Deskripsi</h4> <p>${item.deskripsi_detail}</p>
+                <h4><i class="fas fa-tags"></i> Kategori</h4> <p>${item.kategori}</p>
+                ${fasilitasHtml}
+                <h4><i class="fas fa-clock"></i> Jam Operasional</h4> <p>${item.jam_operasional}</p>
+                ${actionButtonsHtml}`;
+        } else {
+            contentHtml = `<h4><i class="fas fa-info-circle"></i> Deskripsi</h4> <p>${item.deskripsi_detail}</p>
+                <h4><i class="fas fa-store-alt"></i> Kategori</h4> <p>${item.kategori}</p>
+                <h4><i class="fas fa-map-marker-alt"></i> Alamat</h4> <p>${item.alamat_lengkap}</p>
+                ${fasilitasHtml}
+                <h4><i class="fas fa-clock"></i> Jam Operasional</h4> <p>${item.jam_operasional}</p>
+                <h4><i class="fas fa-phone-alt"></i> Kontak</h4> <p>${item.kontak_person || 'Tidak tersedia'}</p>
+                ${actionButtonsHtml}`;
+        }
+        modalTitle.innerHTML = titleIconHtml;
+        modalBodyContent.innerHTML = contentHtml;
+        modal.style.display = "block";
+        document.body.style.overflow = 'hidden';
+    }
+
+    function populateSidebarAndMarkers() {
+        if (!featureList || !wisataLayerGroup || !umkmLayerGroup) return;
+        featureList.innerHTML = ''; 
+        wisataLayerGroup.clearLayers(); 
+        umkmLayerGroup.clearLayers();   
+        const allItems = [...dataWisata.map(item => ({...item, type: 'wisata'})), ...dataUMKM.map(item => ({...item, type: 'umkm'}))];
+        allItems.sort((a, b) => a.nama.localeCompare(b.nama));
+        allItems.forEach(item => {
+            const layerGroup = item.type === 'wisata' ? wisataLayerGroup : umkmLayerGroup;
+            const marker = L.marker([item.lat, item.lng], { icon: createCustomLeafletIcon(item.iconClass, item.iconColor) });
+            marker.on('click', () => openModalWithDetails(item, item.type));
+            layerGroup.addLayer(marker); 
+            const listItem = createSidebarItem(item, item.type);
+            featureList.appendChild(listItem);
+        });
+        document.getElementById('total-wisata').textContent = dataWisata.length;
+        document.getElementById('total-umkm').textContent = dataUMKM.length;
+    }
+    
+    function createSidebarItem(item, type) {
+        const listItem = document.createElement('div');
+        listItem.className = 'sidebar-item';
+        listItem.innerHTML = `<i class="fas ${item.iconClass} fa-icon" style="color: ${item.iconColor};"></i> <span class="item-name">${item.nama}</span><span class="item-type">${type === 'wisata' ? 'Wisata' : 'UMKM'} - ${item.kategori}</span>`;
+        listItem.onclick = () => {
+            map.flyTo([item.lat, item.lng], 16, { animate: true, duration: 1 });
+            setTimeout(() => { openModalWithDetails(item, type); }, 600); 
+        };
+        return listItem;
+    }
+    
+    function initModal(modalElement, closeButtonClass) {
+        const modalToInit = document.getElementById(modalElement);
+        const closeBtn = modalToInit.querySelector(closeButtonClass);
+        if (!modalToInit || !closeBtn) return;
+        const closeModal = () => { 
+            modalToInit.style.display = "none"; 
+            document.body.style.overflow = 'auto';
+        };
+        closeBtn.onclick = closeModal;
+        window.addEventListener('click', (event) => { if (event.target == modalToInit) { closeModal(); } });
+        document.addEventListener('keydown', (event) => { if (event.key === "Escape" && modalToInit.style.display === "block") { closeModal(); } });
+    }
+
+    function locateUser() {
+        if (!navigator.geolocation) {
+            alert("Geolocation tidak didukung oleh browser Anda.");
+            return;
+        }
+        navigator.geolocation.getCurrentPosition(position => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const userLatLng = L.latLng(lat, lng);
+            map.flyTo(userLatLng, 16);
+            if (!userMarker) {
+                userMarker = L.marker(userLatLng, {
+                    icon: createCustomLeafletIcon('fa-location-arrow', 'var(--primary-color)')
+                }).addTo(map);
+            } else {
+                userMarker.setLatLng(userLatLng);
+            }
+            userMarker.bindPopup('<b>Anda di sini</b>').openPopup();
+        }, () => {
+            alert("Tidak dapat mengambil lokasi Anda. Pastikan Anda mengizinkan akses lokasi.");
+        }, { enableHighAccuracy: true });
+    }
+
+    // --- APPLICATION INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', function() {
+        loadDataFromLocalStorage();
+
+        featureList = document.getElementById('feature-list');
+        modal = document.getElementById('infoModal');
+        modalTitle = document.getElementById('modalTitle');
+        modalBodyContent = document.getElementById('modalBodyContent');
+
+        if (!featureList || !modal || !modalTitle || !modalBodyContent) {
+            console.error("Elemen DOM penting tidak ditemukan.");
+            return; 
+        }
+
+        initModal('infoModal', '.close-button');
+        initModal('crudModal', '.crud-close-button');
+
+        const disclaimerModal = document.getElementById('disclaimerModal');
+        const disclaimerCloseBtn = document.getElementById('disclaimerCloseBtn');
+        if (!sessionStorage.getItem('disclaimerAccepted')) {
+            disclaimerModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        disclaimerCloseBtn.onclick = function() {
+            disclaimerModal.style.display = 'none';
+            sessionStorage.setItem('disclaimerAccepted', 'true'); 
+            document.body.style.overflow = 'auto';
+        }
+
+        map = L.map('map', { zoomControl: false }).setView(initialCoords, initialZoom);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const toggleBtn = document.getElementById('toggle-sidebar-btn');
+        const sidebar = document.getElementById('sidebar');
+        if (toggleBtn && sidebar) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('closed');
+                setTimeout(() => map.invalidateSize(), 300);
+            });
+        }
+        
+        wisataLayerGroup = L.layerGroup().addTo(map); 
+        umkmLayerGroup = L.layerGroup().addTo(map);   
+
+        // Add Map Controls
+        L.control.zoom({ position: 'topleft' }).addTo(map);
+        L.Control.geocoder({ defaultMarkGeocode: false, placeholder: 'Cari alamat...', position: 'topleft' })
+            .on('markgeocode', e => map.fitBounds(e.geocode.bbox))
+            .addTo(map);
+        
+        // **FITUR BARU: Tombol Home (Reset View)**
+        L.Control.ResetView = L.Control.extend({
+            onAdd: function(map) {
+                var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+                container.innerHTML = '<a href="#" title="Kembali ke Tampilan Awal"><i class="fas fa-home"></i></a>';
+                L.DomEvent.on(container, 'click', function (e) {
+                    L.DomEvent.stop(e);
+                    if (routingControl) {
+                        map.removeControl(routingControl);
+                        routingControl = null;
+                    }
                     if (userMarker) {
                         map.removeLayer(userMarker);
+                        userMarker = null;
                     }
-                    userMarker = L.marker(latlng, { icon: createCustomLeafletIcon('fa-person-hiking', 'red') })
-                        .addTo(map)
-                        .bindPopup(`<b>Lokasi Anda</b>`)
-                        .openPopup();
+                    map.setView(initialCoords, initialZoom);
                 });
-            });
-            const LocateControl = L.Control.extend({ onAdd: function(map) { return locateButton; } });
-            new LocateControl({ position: 'topleft' }).addTo(map);
-
-            L.Control.ResetView = L.Control.extend({
-                onAdd: function(map) {
-                    var c = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
-                    c.innerHTML = '<a href="#" title="Kembali ke Tampilan Awal"><i class="fas fa-home"></i></a>';
-                    c.style.backgroundColor = 'white';
-                    L.DomEvent.on(c, 'click', function (e) { 
-                        L.DomEvent.stop(e); 
-                        L.DomEvent.preventDefault(e); 
-                        if (routingControl != null) {
-                            map.removeControl(routingControl);
-                            routingControl = null;
-                        }
-                        if (userMarker) {
-                            map.removeLayer(userMarker);
-                            userMarker = null;
-                        }
-                        map.setView(initialCoords, 15); 
-                    });
-                    return c;
-                }
-            });
-            L.control.resetView = function(opts) { return new L.Control.ResetView(opts); }
-            L.control.resetView({ position: 'topleft' }).addTo(map);
-            
-            L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
-
-            const overlayMaps = {
-                "<i class='fas fa-map-marker-alt' style='color:var(--secondary-color)'></i> Destinasi Wisata": wisataLayerGroup,
-                "<i class='fas fa-map-marker-alt' style='color:var(--accent-color)'></i> UMKM Lokal": umkmLayerGroup
-            };
-            layerControl = L.control.layers(null, overlayMaps, { collapsed: false });
-            layerControl.addTo(map); 
-
-            map.whenReady(function() {
-                moveLayerControlToSidebarOnce();
-                populateSidebarAndMarkers(); 
-            });
+                return container;
+            }
         });
+        L.control.resetView = (opts) => new L.Control.ResetView(opts);
+        L.control.resetView({ position: 'topleft' }).addTo(map);
+
+        // **FITUR BARU: Tombol Geolokasi**
+        L.Control.MyLocator = L.Control.extend({
+            onAdd: function(map) {
+                var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+                container.innerHTML = '<a href="#" title="Temukan Lokasi Saya"><i class="fas fa-crosshairs"></i></a>';
+                L.DomEvent.on(container, 'click', function (e) {
+                    L.DomEvent.stop(e);
+                    locateUser();
+                });
+                return container;
+            }
+        });
+        L.control.myLocator = (opts) => new L.Control.MyLocator(opts);
+        L.control.myLocator({ position: 'topleft' }).addTo(map);
         
+        L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
+        
+        const overlayMaps = {
+            "<i class='fas fa-map-marker-alt' style='color:var(--secondary-color)'></i> Destinasi Wisata": wisataLayerGroup,
+            "<i class='fas fa-map-marker-alt' style='color:var(--accent-color)'></i> UMKM Lokal": umkmLayerGroup
+        };
+        layerControl = L.control.layers(null, overlayMaps, { collapsed: false });
+        layerControl.addTo(map); 
+
+        // Setup CRUD Event Listeners
+        document.getElementById('addDataBtn').addEventListener('click', showAddForm);
+        document.getElementById('crudForm').addEventListener('submit', handleCrudFormSubmit);
+        document.getElementById('crudItemType').addEventListener('change', toggleUMKMFields);
+        map.on('click', function(e) {
+            if (document.getElementById('crudModal').style.display === 'block') {
+                document.getElementById('crudLat').value = e.latlng.lat.toFixed(6);
+                document.getElementById('crudLng').value = e.latlng.lng.toFixed(6);
+            }
+        });
+
+        // Final population after everything is ready
+        map.whenReady(function() {
+            document.querySelector('.filter-controls').appendChild(layerControl.getContainer());
+            populateSidebarAndMarkers(); 
+        });  
+    });
     </script>
 </body>
 </html>
